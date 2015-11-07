@@ -86,5 +86,5 @@ newdata$weekday <- ifelse((newdata$weekday=="Sun"|newdata$weekday=="Sat"), "Week
 newmeaninterval <- group_by(newdata, interval, weekday)
 weekdays <- summarize(newmeaninterval, mean=mean(steps))
 library(lattice)                     
-xyplot(mean ~ interval | weekday, data=weekdays, type="l", ylab-"Number of steps", layout=c(1,2))
+xyplot(mean ~ interval | weekday, data=weekdays, type="l", ylab="Number of steps", layout=c(1,2))
 ```
